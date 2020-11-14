@@ -1,6 +1,6 @@
-import { Message, MsgType } from "../generated/graphql";
+import { mkId } from "@shared/utils";
+import { MsgType } from "../generated/graphql";
 import { messagesVar } from "../cache";
-import { mkId } from "../../../shared/src/utils";
 
 export const addMessage = (type: MsgType, content: string) =>
   messagesVar([{ id: mkId(), type, content }, ...messagesVar()]);

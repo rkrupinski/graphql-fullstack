@@ -1,8 +1,8 @@
+import { FieldValidator } from "formik";
 import {
   validateEmail as _validateEmail,
   validatePassword as _validatePassword,
 } from "@shared/utils";
-import { FieldValidator } from "formik";
 
 export const composeValidators = (
   ...validators: FieldValidator[]
