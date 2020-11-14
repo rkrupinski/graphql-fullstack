@@ -1,0 +1,63 @@
+query CATS {
+  cats {
+    id
+    name
+    breed
+  }
+}
+
+query CAT($id: ID!) {
+  cat(id: $id) {
+    id
+    name
+    breed
+    gifs {
+      ...Gif
+    }
+  }
+}
+
+query MESSAGES {
+  messages @client {
+    id
+    type
+    content
+  }
+}
+
+fragment Gif on CatGif {
+  id
+  label: title
+  src: url
+}
+
+mutation ADDCAT($data: CatInput!) {
+  addCat(cat: $data) {
+    success
+    message
+    cat {
+      id
+      name
+      breed
+    }
+  }
+}
+
+mutation EDITCAT($id: ID!, $data: CatInput!) {
+  updateCat(id: $id, cat: $data) {
+    success
+    message
+    cat {
+      id
+      name
+      breed
+    }
+  }
+}
+
+mutation DELETECAT($id: ID!) {
+  deleteCat(id: $id) {
+    success
+    message
+  }
+}

@@ -1,0 +1,15 @@
+documents: 'src/**/*.graphql'
+schema:
+  - "${API_URL}/graphql":
+      headers:
+        Authorization: "Bearer ${MACHINE_USER_TOKEN}"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+      - "fragment-matcher"
+  src/generated/type-policies.ts:
+    plugins:
+      - typescript-apollo-client-helpers

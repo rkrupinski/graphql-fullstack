@@ -1,0 +1,21 @@
+{
+  "cats": [
+    {
+      "name": "Fluffy",
+      "breed": "bengal",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "89976958-bd94-4bd0-ba80-aa5cc29224bb",
+      "email": "test@test.com",
+      "password": "$2b$10$A6PR0lGCa9A1rMGhCD3ZwuDi29KJ/02lAh4xdo3lRxN/lUmPBM.7C"
+    },
+    {
+      "id": "90549770-4f0b-4c2e-ab65-eb971e2a72de",
+      "email": "machine.user@test.com",
+      "password": "$2b$10$Cc7E.elgp.1oq3GEX5LuTOhZdFdMtmHeN0onnhyLdr8z4dvgoCXxC"
+    }
+  ]
+}
